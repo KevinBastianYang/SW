@@ -15,8 +15,10 @@ git clone https://github.com/KevinBastianYang/SW.git
 
 ## Usage
 
-### Demostration using sample files (under /files/ folder)
+### Demostration: using sample files(under /files/ folder)
 ~~~~~~~~~~~~~~~~
 from SW.SW import runSW
+
 runSW(inputFile="sample-input.txt",scoreFile="blosum62.txt",openGap=-2,extGap=-1)
 ~~~~~~~~~~~~~~~~
+### Output files will be under the location with name "SW_align_results.txt"
