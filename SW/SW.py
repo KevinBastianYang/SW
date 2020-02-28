@@ -10,18 +10,9 @@
 ### Scripting must be done from scratch, without the use of any pre-existing packages.
 ### Python standard library (I/O) and numpy are allowed.
 
-import argparse
+
 import numpy as np
 #import pandas as pd
-### This is one way to read in arguments in Python.
-### We need to read input file and score file.
-parser = argparse.ArgumentParser(description='Smith-Waterman Algorithm') 
-parser.add_argument('-i', '--input', help='input file', required=True) 
-parser.add_argument('-s', '--score', help='score file', required=True) 
-parser.add_argument('-o', '--opengap', help='open gap', required=False, default=-2) 
-parser.add_argument('-e', '--extgap', help='extension gap', required=False, default=-1) 
-
-args = parser.parse_args()
 
 
 ### Implement your Smith-Waterman Algorithm
@@ -232,4 +223,4 @@ def runSW(inputFile, scoreFile, openGap, extGap):
 	#print ("open gap penalty : %s" % openGap)
 	#print ("extension gap penalty : %s" % extGap)
 ### Run your Smith-Waterman Algorithm
-runSW(args.input, args.score, args.opengap, args.extgap)
+#runSW(args.input, args.score, args.opengap, args.extgap)
