@@ -1,2 +1,5 @@
 # Smith-Waterman-Implementation
-Hw for CBB 752
+Homework 1 for CBB 752
+
+### Installation
+~~~~~~~~~~~~~~~~
