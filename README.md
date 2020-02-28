@@ -2,7 +2,7 @@
 Homework 1 for CBB 752
 
 ## Installation
----
+
 ### Installation using pip
 ~~~~~~~~~~~~~~~~
  pip install git+https://github.com/KevinBastianYang/SW.git
