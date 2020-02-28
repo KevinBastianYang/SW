@@ -13,4 +13,10 @@ git clone https://github.com/KevinBastianYang/SW.git
 ~~~~~~~~~~~~~~~~
 
 
-### Usage
+## Usage
+
+### Demostration using sample files (under /files/ folder)
+~~~~~~~~~~~~~~~~
+from SW.SW import runSW
+runSW(inputFile="sample-input.txt",scoreFile="blosum62.txt",openGap=-2,extGap=-1)
+~~~~~~~~~~~~~~~~
