@@ -16,7 +16,7 @@ import numpy as np
 
 
 ### Implement your Smith-Waterman Algorithm
-def runSW(inputFile, scoreFile, openGap, extGap):
+def runSW(inputFile, scoreFile, openGap=-2, extGap=-1):
 	
 
 
