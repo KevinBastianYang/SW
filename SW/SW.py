@@ -1,20 +1,6 @@
 #!/Users/jessie/anaconda3/bin/python
 #__author__ = "Jucnen Yang" __email__ = "junchen.yang@yale.edu" __copyright__ = "Copyright 2020" __license__ = "GPL"
 #__version__ = "1.0.0"
-### Usage:
-### Example:
-### Note:
-#python hw1.py -i <input file> -s <score file>
-#python hw1.py -i input.txt -s blosum62.txt
-#Smith-Waterman Algorithm
-### Scripting must be done from scratch, without the use of any pre-existing packages.
-### Python standard library (I/O) and numpy are allowed.
-
-
-import numpy as np
-#import pandas as pd
-
-
 ### Implement your Smith-Waterman Algorithm
 def runSW(inputFile, scoreFile, openGap=-2, extGap=-1):
 	
@@ -75,8 +61,8 @@ def runSW(inputFile, scoreFile, openGap=-2, extGap=-1):
 	for i in range(1,len(seq2)+1):
 		for j in range(1,len(seq1)+1):
 			similarity_mat[i][j] = score_schem[name_index[seq2[i-1]]][name_index[seq1[j-1]]]	
-    ####initialization of the trace matrix (n+1,m+1), in which [x,y] represents the trace back position 
-    ####note: [-1, -1] represents the current pos in the score_mat is 0
+    	####initialization of the trace matrix (n+1,m+1), in which [x,y] represents the trace back position 
+    	####note: [-1, -1] represents the current pos in the score_mat is 0
 	trace_mat = np.zeros((len(seq2)+1,len(seq1)+1,2))
 	for i in range(len(seq2)+1):
 		trace_mat[i][0] = np.array([-1,-1])
@@ -217,10 +203,3 @@ def runSW(inputFile, scoreFile, openGap=-2, extGap=-1):
 
 	print("Aligment finished! Alignment results are in file: SW_align_results.txt\n")
 	return(0)
-	### Print input and score file names. You can comment these out. 
-	#print ("input file : %s" % inputFile)
-	#print ("score file : %s" % scoreFile)
-	#print ("open gap penalty : %s" % openGap)
-	#print ("extension gap penalty : %s" % extGap)
-### Run your Smith-Waterman Algorithm
-#runSW(args.input, args.score, args.opengap, args.extgap)
